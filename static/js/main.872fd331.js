@@ -22378,7 +22378,7 @@
                           transition: { delay: 0.3 },
                           whileHover: { scale: 1.02 },
                           children: (0, Vn.jsx)("img", {
-                            src: "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/ozpuhnjr_IMG_5683.jpeg",
+                            src: "/assets/HCc2UrfWoAATcwi.jpg",
                             alt: "Browt Tweet - Reporting for duty",
                             className: "w-full h-auto",
                           }),
@@ -22391,7 +22391,7 @@
                           transition: { delay: 0.4 },
                           whileHover: { scale: 1.02 },
                           children: (0, Vn.jsx)("img", {
-                            src: "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/yj88ez2u_IMG_5685.jpeg",
+                            src: "/assets/HCoUCSuXkAAXy9e.jpg",
                             alt: "Browt Tweet - Heard you twin",
                             className: "w-full h-auto",
                           }),
@@ -22404,7 +22404,7 @@
                           transition: { delay: 0.5 },
                           whileHover: { scale: 1.02 },
                           children: (0, Vn.jsx)("img", {
-                            src: "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/ttdv5kxm_IMG_5686.jpeg",
+                            src: "/assets/HClq3UaWQAA1hAO.jpg",
                             alt: "Browt Tweet - Hearing things",
                             className: "w-full h-auto",
                           }),

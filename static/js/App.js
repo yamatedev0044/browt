@@ -312,11 +312,11 @@ const LORE_IMAGE_1 =
 const LORE_IMAGE_2 =
   "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/qkhitocc_image.png"; // IGN tweet
 const LORE_IMAGE_3 =
-  "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/ozpuhnjr_IMG_5683.jpeg"; // Reporting for duty
+  "/assets/HCc2UrfWoAATcwi.jpg"; // Reporting for duty
 const LORE_IMAGE_4 =
-  "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/yj88ez2u_IMG_5685.jpeg"; // Heard you twin
+  "/assets/HCoUCSuXkAAXy9e.jpg"; // Heard you twin
 const LORE_IMAGE_5 =
-  "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/ttdv5kxm_IMG_5686.jpeg"; // Hearing things
+  "/assets/HClq3UaWQAA1hAO.jpg"; // Hearing things
 
 // Lore Section
 const LoreSection = () => (
