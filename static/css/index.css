@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=JetBrains+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a2010;
+  --bg-secondary: #1a4020;
+  --text-primary: #ffffff;
+  --text-secondary: #90ee90;
+  --accent-gold: #ffda44;
+  --accent-wood: #228b22;
+  --highlight-toxic: #7cfc00;
+  --highlight-cyan: #90ee90;
+  --sand: #7cfc00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Grain overlay effect */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight-toxic);
+}
+
+/* Heading font */
+.font-bangers {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.05em;
+}
+
+/* Body font */
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(124, 252, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 218, 68, 0.8),
+      0 0 60px rgba(124, 252, 0, 0.3);
+  }
+}
+
+@keyframes drum-beat {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.05) rotate(-3deg);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+  }
+  75% {
+    transform: scale(1.05) rotate(3deg);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-shake:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-drum-beat {
+  animation: drum-beat 1s ease-in-out infinite;
+}
+
+.animate-star {
+  animation: star-twinkle 2s ease-in-out infinite;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: #000;
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  font-family: "Bangers", cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.btn-primary:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-gold);
+  border: 3px solid var(--accent-gold);
+  font-family: "Bangers", cursive;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-gold);
+  color: #000;
+}
+
+/* Card styles */
+.card-wood {
+  background: linear-gradient(135deg, #1a4020 0%, #0a2010 100%);
+  border: 2px solid var(--highlight-toxic);
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.card-wood::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+/* Selection style */
+::selection {
+  background-color: var(--accent-gold);
+  color: #000;
+}
+
+/* Film strip borders */
+.film-strip {
+  background: repeating-linear-gradient(
+    90deg,
+    #000 0px,
+    #000 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  height: 20px;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  color: var(--highlight-cyan);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.glitch::after {
+  color: var(--highlight-toxic);
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch-anim {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Tailwind base overrides */
+@layer base {
+  :root {
+    --background: 135 50% 6%;
+    --foreground: 0 0% 100%;
+    --card: 135 33% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 135 50% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 51 100% 63%;
+    --primary-foreground: 135 100% 20%;
+    --secondary: 135 33% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 135 33% 15%;
+    --muted-foreground: 120 73% 75%;
+    --accent: 105 100% 49%;
+    --accent-foreground: 135 50% 6%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 120 73% 75%;
+    --input: 135 33% 15%;
+    --ring: 105 100% 49%;
+    --radius: 8px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
