@@ -22024,8 +22024,9 @@
     });
     const jl = "0xpumpfun",
       zl = "https://pump.fun/coin/0xpumpfun",
-      Rl = "https://x.com/#",
+      Rl = "https://x.com/brwotonsol",
       Ol = "https://x.com/i/communities/#",
+      RL = "https://t.me/browtonsol",
       _l =
         "https://customer-assets.emergentagent.com/job_browt-preview/artifacts/lo3clpz5_image.png",
       Vl = (e) => {
@@ -22668,7 +22669,25 @@
                                 d: "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z",
                               }),
                             }),
-                            "Community",
+                            "X Community",
+                          ],
+                        }),
+                        (0, Vn.jsxs)("a", {
+                          href: RL,
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                          className:
+                            "btn-secondary px-6 py-3 flex items-center gap-2 border-[#7CFC00] text-[#7CFC00] hover:bg-[#7CFC00] hover:text-[#0a2010]",
+                          children: [
+                            (0, Vn.jsx)("svg", {
+                              viewBox: "0 0 24 24",
+                              className: "w-5 h-5",
+                              fill: "currentColor",
+                              children: (0, Vn.jsx)("path", {
+                                d: "M9.04 15.47l-.39 5.49c.56 0 .81-.24 1.11-.53l2.67-2.55 5.53 4.05c1.01.56 1.72.27 1.98-.94l3.59-16.8.001-.001c.32-1.5-.54-2.09-1.52-1.73L1.6 9.6C.15 10.17.17 10.97 1.35 11.34l5.53 1.73L19.47 5.4c.59-.36 1.13-.16.69.2",
+                              }),
+                            }),
+                            "Telegram",
                           ],
                         }),
                       ],
